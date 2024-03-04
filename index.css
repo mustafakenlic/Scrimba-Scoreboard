@@ -4,11 +4,13 @@
     --dark: #1F2937;
     --white: #f4f4f4;
 }
+
 html,body{
     width: 100vw;
     height: auto;
     box-sizing: border-box;
 }
+
 body {
     background-color: var(--wite);
     font-family: "Inter", sans-serif;
@@ -61,7 +63,6 @@ body {
 }
 
 .custom-select select {
-
     /* styling */
     background-color: var(--white);
     border: thin solid var(--dark);
@@ -78,8 +79,6 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 
     /*Arrow*/
     background-image:
@@ -176,24 +175,19 @@ body {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-
 }
 
 .result {
@@ -230,6 +224,7 @@ body {
     border: 1px solid var(--blue);
     text-align: center;
 }
+
 @media only screen and (min-width: 900px) {
     .result {
         width: calc(50% - 15px);
