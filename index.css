@@ -4,7 +4,11 @@
     --dark: #1F2937;
     --white: #f4f4f4;
 }
-
+html,body{
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+}
 body {
     background-color: var(--wite);
     font-family: "Inter", sans-serif;
@@ -16,8 +20,8 @@ body {
 
 .container {
     width: 90%;
-    max-width: 550px;
-    margin: 50px auto 0 auto;
+    max-width: 900px;
+    margin: 50px auto;
     background-color: var(--dark);
     text-align: center;
 }
@@ -152,6 +156,12 @@ body {
     line-height: 1.5em;
     padding: 0.5em 2em;
     cursor: pointer;
+
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
 }
 
 /*Results*/
@@ -187,8 +197,8 @@ body {
 .result {
     background-color: var(--light);
     margin-bottom: 20px;
-    padding: 20px;
-    width: calc(50% - 12.5px);
+    padding: 20px;    
+    width: 100%;
 }
 
 .result .title{
@@ -214,3 +224,8 @@ body {
     border: 1px solid var(--blue);
     text-align: center;
 }
+@media only screen and (min-width: 900px) {
+    .result {
+        width: calc(50% - 12.5px);
+    }
+  }
