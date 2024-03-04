@@ -28,7 +28,7 @@ body {
 
 #results,
 #header {
-    padding: 20px 20px 0 20px;
+    padding: 30px;
 }
 
 #header {
@@ -50,6 +50,10 @@ body {
 
 .option {
     margin-bottom: 20px;
+}
+
+.option:last-child {
+    margin-bottom: 0;
 }
 
 .custom-select {
@@ -194,9 +198,13 @@ body {
 
 .result {
     background-color: var(--light);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 20px;    
     width: 100%;
+}
+
+#results {
+    padding-bottom: 0;
 }
 
 .result .title{
@@ -224,6 +232,6 @@ body {
 }
 @media only screen and (min-width: 900px) {
     .result {
-        width: calc(50% - 12.5px);
+        width: calc(50% - 15px);
     }
   }
