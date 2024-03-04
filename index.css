@@ -1,7 +1,216 @@
-* {
-    box-sizing: border-box;
+:root {
+    --blue: #6943FF;
+    --light: #273549;
+    --dark: #1F2937;
+    --white: #f4f4f4;
 }
 
 body {
-    margin: 0;
+    background-color: var(--wite);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 550px;
+    margin: 50px auto 0 auto;
+    background-color: var(--dark);
+    text-align: center;
+}
+
+#results,
+#header {
+    padding: 35px 25px;
+}
+
+#header {
+    background-color: var(--blue);
+}
+
+.title {
+    color: var(--white);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1em;
+}
+
+/*Options*/
+#header .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.option {
+    margin-bottom: 25px;
+    ;
+}
+
+
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+
+    /* styling */
+    background-color: var(--white);
+    border: thin solid var(--dark);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--dark);
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    cursor: pointer;
+
+    /* reset */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /*Arrow*/
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--white) 50%),
+        linear-gradient(135deg, var(--white) 50%, transparent 50%),
+        linear-gradient(to right, var(--dark), var(--dark));
+    background-position:
+        calc(100% - 23px) 1em,
+        calc(100% - 13px) 1em,
+        100% 0;
+    background-size:
+        10px 10px,
+        10px 10px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+.custom-select select:focus {
+    background-image:
+        linear-gradient(45deg, var(--white) 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, var(--white) 50%),
+        linear-gradient(to right, var(--light), var(--light));
+    background-position:
+        calc(100% - 13px) 1em,
+        calc(100% - 23px) 1em,
+        100% 0;
+    background-size:
+        10px 10px,
+        10px 10px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: var(--light);
+    outline: 0;
+    /*hva no idea but prevents*/
+    pointer-events: none
+}
+
+.option input {
+    background-color: var(--white);
+    border: thin solid var(--dark);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--dark);
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+    text-align: center;
+    max-width: 260px;
+
+    /*Hide arrow for input*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    /*Hide arrow for input END*/
+}
+
+/*Hide arrow for input*/
+/* Chrome, Safari, Edge, Opera */
+.option input::-webkit-outer-spin-button,
+.option input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+/*Hide arrow for input END*/
+
+#convertBtn{
+    background-color: var(--dark);
+    border: thin solid var(--light);
+    color: var(--white);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding: 0.5em 2em;
+    cursor: pointer;
+}
+
+/*Results*/
+#results{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+}
+
+.result {
+    background-color: var(--light);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: calc(50% - 12.5px);
+}
+
+.result .title{
+    font-size: 18px;
+}
+
+.result:last-child {
+    margin-bottom: 0;
+}
+
+.result table{
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.result table thead{
+    background-color: var(--blue);
+}
+
+.result table td{
+    padding: 2px 5px;
+    color: var(--white);
+    border: 1px solid var(--blue);
+    text-align: center;
 }

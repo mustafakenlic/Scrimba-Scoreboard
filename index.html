@@ -1,11 +1,167 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header id="header">
+        <div>
+          <h1 class="title">Metric/Imperial Unit Conversion</h1>
+        </div>
+        <div class="options">
+          <div class="option custom-select">
+            <select id="convertType">
+              <option value="m2i" selected="selected">
+                Metric to Imperial
+              </option>
+              <option value="i2m">Imperial to Metric</option>
+            </select>
+          </div>
+          <div class="option">
+            <input type="number" value="0" id="convertNumber"/>
+          </div>
+          <div class="option">
+            <span id="convertBtn">Convert</span>
+          </div>
+        </div>
+      </header>
+      <section id="results">
+
+        <section class="result" id="length">
+          <div><h2 class="title">Length</h2></div>
+          <div class="calculation">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Imperial</td>
+                        <td>Metric</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 in</td>
+                        <td>2.54 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 ft</td>
+                        <td>30.48 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 yd</td>
+                        <td>0.9144 m</td>
+                    </tr>
+                    <tr>
+                        <td>1 mi</td>
+                        <td>1.6093 km</td>
+                    </td>
+                </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="result" id="area">
+            <div><h2 class="title">Area</h2></div>
+            <div class="calculation">
+              <table>
+                  <thead>
+                      <tr>
+                          <td>Imperial</td>
+                          <td>Metric</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1 in</td>
+                          <td>2.54 cm</td>
+                      </tr>
+                      <tr>
+                          <td>1 ft</td>
+                          <td>30.48 cm</td>
+                      </tr>
+                      <tr>
+                          <td>1 yd</td>
+                          <td>0.9144 m</td>
+                      </tr>
+                      <tr>
+                          <td>1 mi</td>
+                          <td>1.6093 km</td>
+                      </td>
+                  </tbody>
+              </table>
+            </div>
+          </section>
+
+        <section class="result" id="volume">
+            <div><h2 class="title">Volume</h2></div>
+          <div class="calculation">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Imperial</td>
+                        <td>Metric</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 in</td>
+                        <td>2.54 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 ft</td>
+                        <td>30.48 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 yd</td>
+                        <td>0.9144 m</td>
+                    </tr>
+                    <tr>
+                        <td>1 mi</td>
+                        <td>1.6093 km</td>
+                    </td>
+                </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="result" id="weigth">
+            <div><h2 class="title">Weigth</h2></div>
+          <div class="calculation">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Imperial</td>
+                        <td>Metric</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 in</td>
+                        <td>2.54 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 ft</td>
+                        <td>30.48 cm</td>
+                    </tr>
+                    <tr>
+                        <td>1 yd</td>
+                        <td>0.9144 m</td>
+                    </tr>
+                    <tr>
+                        <td>1 mi</td>
+                        <td>1.6093 km</td>
+                    </td>
+                </tbody>
+            </table>
+          </div>
+        </section>
+      
+    </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
 </html>
