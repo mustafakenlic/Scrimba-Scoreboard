@@ -21,14 +21,14 @@ body {
 .container {
     width: 90%;
     max-width: 900px;
-    margin: 50px auto;
+    margin: 20px auto;
     background-color: var(--dark);
     text-align: center;
 }
 
 #results,
 #header {
-    padding: 35px 25px;
+    padding: 20px 20px 0 20px;
 }
 
 #header {
@@ -45,14 +45,12 @@ body {
 /*Options*/
 #header .title {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .option {
-    margin-bottom: 25px;
-    ;
+    margin-bottom: 20px;
 }
-
 
 .custom-select {
     position: relative;
@@ -202,7 +200,7 @@ body {
 }
 
 .result .title{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .result:last-child {

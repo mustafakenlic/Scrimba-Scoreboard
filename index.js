@@ -16,26 +16,26 @@ const lengthConversionRates = [
   { imperialSembole: "in", metricSembole: "cm", rate: 2.54 },
   { imperialSembole: "ft", metricSembole: "cm", rate: 30.48 },
   { imperialSembole: "yd", metricSembole: "m", rate: 0.9144 },
-  { imperialSembole: "mi", metricSembole: "km", rate: 1.6093 },
+  { imperialSembole: "mi", metricSembole: "km", rate: 1.609344 },
 ];
 
 const areaConversionRates = [
   { imperialSembole: "in²", metricSembole: "cm²", rate: 6.4516 },
-  { imperialSembole: "ft²", metricSembole: "cm²", rate: 0.929 },
-  { imperialSembole: "yd²", metricSembole: "m²", rate: 0.8361 },
-  { imperialSembole: "mi²", metricSembole: "km²", rate: 2.59 },
+  { imperialSembole: "ft²", metricSembole: "m²", rate: 0.09290304 },
+  { imperialSembole: "yd²", metricSembole: "m²", rate: 0.83612736 },
+  { imperialSembole: "mi²", metricSembole: "km²", rate: 2.58998811 },
 ];
 
 const volumeConversionRates = [
-  { imperialSembole: "fl oz", metricSembole: "ml", rate: 29.57 },
-  { imperialSembole: "pt", metricSembole: "L", rate: 0.4732 },
-  { imperialSembole: "gal", metricSembole: "L", rate: 3.7854 },
+  { imperialSembole: "fl oz", metricSembole: "ml", rate: 29.5735296 },
+  { imperialSembole: "pt", metricSembole: "L", rate: 0.473176473 },
+  { imperialSembole: "gal", metricSembole: "L", rate: 3.78541178 },
 ];
 
 const weigthConversionRates = [
-  { imperialSembole: "oz", metricSembole: "gr", rate: 28.35 },
-  { imperialSembole: "lb", metricSembole: "kg", rate: 0.4536 },
-  { imperialSembole: "ton", metricSembole: "t", rate:  0.9072},
+  { imperialSembole: "oz", metricSembole: "gr", rate: 28.3495231 },
+  { imperialSembole: "lb", metricSembole: "kg", rate: 0.45359237 },
+  { imperialSembole: "ton", metricSembole: "t", rate:  1.01604691},
 ];
 
 convertButton.addEventListener("click", () => {
@@ -91,13 +91,13 @@ const calculate = (number, arr) => {
     // define and assign default metric to imperial conversion values
     let semboleLeft = arr[i].metricSembole;
     let sembolerigth = arr[i].imperialSembole;
-    let calc = round(Number(number) / Number(arr[i].rate), 3);
+    let calc = round(Number(number) * Number(arr[i].rate), 3);
 
     // if it is imperial to metric
     if (convertType === "i2m") {
       semboleLeft = arr[i].imperialSembole;
       sembolerigth = arr[i].metricSembole;
-      calc = round(Number(number) * Number(arr[i].rate), 3);
+      calc = round(Number(number) / Number(arr[i].rate), 3);
     }
 
     result += `<tr>
